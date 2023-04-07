@@ -1,5 +1,3 @@
-import org.w3c.dom.ls.LSOutput;
-
 public class Dog extends Animal{
     private String type = "Собака";
 

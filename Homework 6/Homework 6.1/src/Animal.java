@@ -8,6 +8,14 @@ abstract class Animal {
         this.age = age;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public String getName() {
         return name;
     }
@@ -24,15 +32,7 @@ abstract class Animal {
         this.age = age;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String makeNoise() {
+    public String makeNoise(){
         return null;
     }
 }
