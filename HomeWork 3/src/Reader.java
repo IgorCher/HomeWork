@@ -1,15 +1,15 @@
+import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-public class Reader {
+public class Reader implements Serializable {
     private String name;
     private String surname;
     private String birthDate;
     private String faculty;
     private int number;
     private String phoneNumber;
-    List<Book> books = new ArrayList<>();
+    private ArrayList<Book> books = new ArrayList<>();
 
     public void setName(String name) {
         this.name = name;
@@ -81,6 +81,7 @@ public class Reader {
                 bookNames.append(book.getName()).append(", ");
             }
         }
-        System.out.printf("%s %s взял %d книг(-у)(-и): %s\n", name, surname, count, bookNames);
+        System.out.printf("%s %s (номер читательского билета: %s) " +
+                "взял %d книг(-у)(-и): %s\n", name, surname, number, count, bookNames);
     }
 }
